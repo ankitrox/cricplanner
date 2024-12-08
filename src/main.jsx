@@ -1,15 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Layout from './layouts/dashboard';
 import DashboardPage from './pages';
 import OrdersPage from './pages/orders';
 import SignInPage from './pages/signIn';
-import { AuthProvider } from './AuthContext';
 import Home from './Home';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     Component: Home,
     children: [
